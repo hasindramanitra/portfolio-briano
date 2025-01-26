@@ -43,6 +43,15 @@ export default function Navbar() {
             </li>
             <li>
               <Link
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                activeClass="active"
+                duration={500} className='nav cursor-pointer'>Skills</Link>
+            </li>
+            <li>
+              <Link
                 to="projects"
                 spy={true}
                 smooth={true}
@@ -62,11 +71,11 @@ export default function Navbar() {
             </li>
           </motion.ul>
           {
-            nav && <motion.ul 
-            className='bg-[#182a52] block md:hidden w-full font-Ibm absolute top-10 right-0 text-[#F5BD02] space-y-3 py-3 text-center mt-[20px]'
-            initial={{ y: '-100%', opacity: 0 }} // Start above the screen
-            animate={{ y: 0, opacity: 1 }} // Move into position and fade in
-            transition={{ type: 'spring', stiffness: 50, damping: 20 }}>
+            nav && <motion.ul
+              className='bg-[#182a52] block md:hidden w-full font-Ibm absolute top-10 right-0 text-[#F5BD02] space-y-3 py-3 text-center mt-[20px]'
+              initial={{ y: '-100%', opacity: 0 }} // Start above the screen
+              animate={{ y: 0, opacity: 1 }} // Move into position and fade in
+              transition={{ type: 'spring', stiffness: 50, damping: 20 }}>
               <li>
                 <Link
                   to="home"
@@ -75,6 +84,15 @@ export default function Navbar() {
                   offset={-100}
                   activeClass="active"
                   duration={500} className='nav cursor-pointer'>Home</Link>
+              </li>
+              <li>
+                <Link
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  activeClass="active"
+                  duration={500} className='nav cursor-pointer'>Skills</Link>
               </li>
               <li>
                 <Link
